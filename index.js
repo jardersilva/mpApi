@@ -24,7 +24,9 @@ app.set("view engine", "ejs");
 //Payments route
 app.use('/payments',paymentsRoute);
 
-app.listen(process.env.API_PORT || 5000, '0.0.0.0', function(err){
+port_number = server.listen(process.env.PORT || 5000);
+
+app.listen(port_number || 5000, '0.0.0.0', function(err){
     if(err) console.error(err);
-    console.log(`API INICIADA NA PORTA ${process.env.API_PORT}`) 
+    console.log(`API INICIADA NA PORTA ${port_number}`) 
 });
