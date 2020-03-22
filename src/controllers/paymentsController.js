@@ -8,14 +8,13 @@ const getFullUrl = (req) =>{
 
 module.exports = {
     async checkout(req, res){
+      const { token, sandbox, id, email, description, amount } = req.params;
 
         console.log(process.env)
         MercadoPago.configure({
-            sandbox: process.env.SANDBOX == 'true' ? true : false,
-            access_token: process.env.MP_ACCESS_TOKEN
+            sandbox: sandbox == 'true' ? true : false,
+            access_token: token
         });
-
-        const { id, email, description, amount } = req.params;
 
         //Create purchase item object template
         const purchaseOrder = {
