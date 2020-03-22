@@ -24,7 +24,7 @@ app.set("view engine", "ejs");
 //Payments route
 app.use('/payments',paymentsRoute);
 
-var port_number = server.listen(process.env.PORT || 5000);
+var port_number = process.env.PORT || 5000;
 
 app.listen(port_number || 5000, '0.0.0.0', function(err){
     if(err) console.error(err);
