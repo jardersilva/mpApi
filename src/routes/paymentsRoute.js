@@ -8,7 +8,7 @@ routes.get('/checkout/:token/:sandbox/:id/:email/:description/:amount', payments
 routes.get('/success', (req, res) => {
     return res.render('success_screen')
 })
-//res.send(req.get('Teste'));
+
 routes.get('/pending', (req, res) => {
     res.redirect('https://api.mercadopago.com/v1/payments/'+req.query.collection_id+'?access_token='+req.query.token);
 })
