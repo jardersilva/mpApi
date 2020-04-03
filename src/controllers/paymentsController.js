@@ -12,7 +12,7 @@ module.exports = {
 
         console.log(process.env)
         MercadoPago.configure({
-            sandbox: sandbox == 'true' ? true : false,
+            sandbox: sandbox === 'true' ? true : false,
             access_token: token
         });
 
