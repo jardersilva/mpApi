@@ -35,7 +35,7 @@ module.exports = {
             external_reference : id,
             back_urls : {
               success : getFullUrl(req) + "/payments/success",
-              pending : getFullUrl(req) + "/payments/pending2",
+              pending : getFullUrl(req) + "/payments/pending",
               failure : getFullUrl(req) + "/payments/failure",
             }
           }
