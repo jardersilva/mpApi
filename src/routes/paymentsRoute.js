@@ -10,7 +10,7 @@ routes.get('/success', (req, res) => {
 })
 
 routes.get('/pending', (req, res) => {
-    return res.render('pending_screen')
+    return res.render('{"oi": "oi"}')
     //res.redirect('https://api.mercadopago.com/v1/payments/'+req.query.collection_id+'?access_token='+req.query.token);
 })
 
